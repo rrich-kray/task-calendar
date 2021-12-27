@@ -43,8 +43,7 @@ $('.hour-body').on('focus', function(){
 
 document.querySelector('.hour-body').addEventListener('keyup', function(event){
     if (event.keyCode === 13) {
-        var eventObject = window.localStorage.getItem('events') // returns undefined
-        console.log(eventObject)
+        var eventObject = JSON.parse(window.localStorage.getItem('events')) // returns undefined
         var tasks = eventObject[event.target.parentElement.dataset.time];
         console.log(tasks) // returns undefined
         tasks.push(event.target.textContent);
@@ -52,7 +51,6 @@ document.querySelector('.hour-body').addEventListener('keyup', function(event){
         textbox.textContent = "";
     }
 })
-
 
 $('.hour').on('click', function(event){
     var modal = document.querySelector('.modal');

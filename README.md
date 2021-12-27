@@ -22,7 +22,7 @@ Directly below, the user will find timeblocks within which he or she can enter t
 
 Hitting the adjacent blue button seen in the screenshot above will display a prompt containing all previously inputted tasks. Clicking anywhere on the page closes the prompt.
 
-![Content Prompt Screenshot](./assets/images/screen4.png)
+![Modal screenshot](./assets/images/screen4.png)
 
 
 ## Deployed Application

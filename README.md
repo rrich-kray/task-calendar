@@ -12,7 +12,7 @@ Never lose track of an important meeting or deadline again! With Task Calendar, 
 
 This application provided me with a great oportunity to become more familiar with third-party frameworks in general, in particular Bootstrap, which shortened the development time of this app.
 
-WIth some experience using relational and non-relational databases under my belt, I plan to revisit this application in the future and implement database storage in lieu of local storage for storing tasks. I also believe there are several opportunities for UI enhancement, such as implementing a grid-style layout using CSS grid and modal display when a particular time is selected.
+With some experience using relational and non-relational databases under my belt, I plan to revisit this application in the future and implement database storage in lieu of local storage for storing tasks. I also believe there are several opportunities for UI enhancement, such as implementing a grid-style layout using CSS grid and modal display when a particular time is selected.
 
 ## Usage
 

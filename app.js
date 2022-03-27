@@ -1,51 +1,92 @@
-var events = {
-    "8:00AM": [],
-    "9:00AM": [],
-    "10:00AM": [],
-    "11:00AM": [],
-    "12:00PM": [],
-    "1:00PM": [],
-    "2:00PM": [],
-    "3:00PM": [],
-    "4:00PM": [],
-    "5:00PM": [],
-    "6:00PM": [],
-    "7:00PM": [],
-    "8:00AM": []
-}
+var events = [
+    {
+        time: "8:00AM",
+        events: []
+    },
+    {
+        time: "9:00AM",
+        events: []
+    },
+    {
+        time: "10:00AM",
+        events: []
+    },
+    {
+        time: "11:00AM",
+        events: []
+    },
+    {
+        time: "12:00PM",
+        events: []
+    },
+    {
+        time: "1:00PM",
+        events: []
+    },
+    {
+        time: "2:00PM",
+        events: []
+    },
+    {
+        time: "3:00PM",
+        events: []
+    },
+    {
+        time: "4:00PM",
+        events: []
+    },
+    {
+        time: "5:00PM",
+        events: []
+    },
+    {
+        time: "6:00PM",
+        events: []
+    },
+    {
+        time: "7:00PM",
+        events: []
+    },
+    {
+        time: "8:00PM",
+        events: []
+    },
+]
 
-var getCurrentTime = setInterval(function(){
+var getCurrentTime = setInterval(function(){ // works
     var currentDay = moment();
     document.querySelector("#currentDay").innerHTML = currentDay.format('dddd MMMM Do YYYY, h:mm:ss a')
 }, 1000)
 
 
 var checkStorage = function(){
-    if (!window.localStorage.getItem('events')) {
-        window.localStorage.clear();
-        window.localStorage.setItem('events', JSON.stringify(events))
+    if (window.localStorage.getItem('events').length === 0) {
+        window.localStorage.removeItem('events');
+        window.localStorage.setItem('events', JSON.stringify(events));
     }
+    if (!window.localStorage.getItem('events') ) {window.localStorage.setItem('events', JSON.stringify(events)) }
 }
+
+document.querySelector('.hour-body').addEventListener('keyup', function(event){
+    if (event.keyCode === 13) {
+        var eventObject = JSON.parse(window.localStorage.getItem('events')) 
+        console.log(eventObject); // Undefined 
+        var tasks = eventObject[event.target.parentElement.dataset.time]; // returning undefined because times aren't being saved to local storage. events array is empty?
+        console.log(tasks) // So push method won't work on undefined
+        tasks.push(event.target.textContent);
+        window.localStorage.setItem('events', JSON.stringify(tasks));
+    }
+})
 
 var colorHours = function(){
     var now = moment();
     var textBox = document.querySelector(".hour-body")
     document.querySelectorAll('.hour').forEach(function(hour) {
-        if (now.isBefore(moment(hour.dataset.time))) {textBox.classList.add("future")}
-        if (now === moment(hour.dataset.time)) {textBox.classList.add("present")}
-        if (now.isAfter(moment(hour.dataset.time))) {textBox.classList.add("past")}
+        if (now.valueOf() < moment(hour.dataset.time).valueOf()) {textBox.classList.add("future")}
+        if (now.valueOf() === moment(hour.dataset.time).valueOf()) {textBox.classList.add("present")}
+        if (now.valueOf() > moment(hour.dataset.time).valueOf()) {textBox.classList.add("past")}
     })
 }
-
-document.querySelector('.hour-body').addEventListener('keyup', function(event){
-    if (event.keyCode === 13) {
-        var eventObject = JSON.parse(window.localStorage.getItem('events')) // returns undefined
-        var tasks = eventObject[event.target.parentElement.dataset.time];
-        tasks.push(event.target.textContent);
-        window.localStorage.setItem('events', JSON.stringify(timeObject));
-        textbox.textContent = "";
-    }
-})
 
 $('.hour').on('click', function(event){
     var modal = document.querySelector('.modal');

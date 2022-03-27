@@ -10,7 +10,7 @@ This repository contains the source code for the Task Calendar Project.
 
 Never lose track of an important meeting or deadline again! With Task Calendar, users can keep track of important events and better manage their time.
 
-This application provided me with a great opPortunity to become more familiar with third-party frameworks in general, in particular Bootstrap, which shortened the development time of this app.
+This application provided me with a great opportunity to become more familiar with third-party frameworks in general, in particular Bootstrap, which shortened the development time of this app.
 
 With some experience using relational and non-relational databases under my belt, I plan to revisit this application in the future and implement database storage in lieu of local storage for storing tasks. I also believe there are several opportunities for UI enhancement, such as implementing a grid-style layout using the CSS grid property and implment a modal display when a particular time is selected. I would also like to expand the functionality of this app by allowing the user to select a particular date and create a schedule there.
 

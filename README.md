@@ -2,13 +2,17 @@
 
 ## The Repository
 
-This repository contains the HTML, CSS and Javascript code for the Task Calendar Project.
+This repository contains the source code for the Task Calendar Project.
 
 ## Task Calendar
 
 ![Task Calendar Screenshot](./assets/images/screen1.png)
 
-Never lose track of an important meeting again! With Task Calendar, users can keep track of important events and better manage their time.
+Never lose track of an important meeting or deadline again! With Task Calendar, users can keep track of important events and better manage their time.
+
+This application provided me with a great oportunity to become more familiar with third-party frameworks in general, in particular Bootstrap, which shortened the development time of this app.
+
+WIth some experience using relational and non-relational databases under my belt, I plan to revisit this application in the future and implement database storage in lieu of local storage for storing tasks. I also believe there are several opportunities for UI enhancement, such as implementing a grid-style layout using CSS grid and modal display when a particular time is selected.
 
 ## Usage
 
@@ -23,6 +27,13 @@ Directly below, the user will find timeblocks within which he or she can enter t
 Hitting the adjacent blue button seen in the screenshot above will display a prompt containing all previously inputted tasks. Clicking anywhere on the page closes the prompt.
 
 ![Modal screenshot](./assets/images/screen4.png)
+
+## Utilizes:
+
+- HTML
+- CSS
+- JavaScript
+- JQuery
 
 ## Deployed Application
 

@@ -32,6 +32,7 @@ Hitting the adjacent blue button seen in the screenshot above will display a pro
 
 - HTML
 - CSS
+- Bootstrap
 - JavaScript
 - JQuery
 
